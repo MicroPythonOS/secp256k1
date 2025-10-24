@@ -55,6 +55,7 @@
  * If WINDOW_G > 31 and int has 32 bits, then the code is incorrect
  * because certain expressions will overflow.
  */
+#define ECMULT_WINDOW_SIZE 4 // workaround compilation issue on esp32
 #if ECMULT_WINDOW_SIZE < 2 || ECMULT_WINDOW_SIZE > 24
 #  error Set ECMULT_WINDOW_SIZE to an integer in range [2..24].
 #endif

@@ -10,6 +10,7 @@
 #include "scalar.h"
 #include "group.h"
 
+#define ECMULT_GEN_PREC_BITS 4 // workaround compilation issue on esp32
 #if ECMULT_GEN_PREC_BITS != 2 && ECMULT_GEN_PREC_BITS != 4 && ECMULT_GEN_PREC_BITS != 8
 #  error "Set ECMULT_GEN_PREC_BITS to 2, 4 or 8."
 #endif
