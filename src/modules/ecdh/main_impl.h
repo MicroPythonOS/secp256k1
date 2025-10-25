@@ -65,7 +65,7 @@ int secp256k1_ecdh(const secp256k1_context* ctx, unsigned char *output, const se
     memset(y, 0, 32);
     secp256k1_scalar_clear(&s);
 
-    return !!ret & !overflow;
+    return !!ret && !overflow;
 }
 
 #endif /* SECP256K1_MODULE_ECDH_MAIN_H */
